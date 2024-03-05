@@ -1,7 +1,11 @@
 const { faker } = require('@faker-js/faker/locale/fr');
-const { generateRandomInt } = require('../util/randomInt');
+const { generateRandomInt } = require('../app/util/randomInt');
 const {User, Vehicle, Address, Review} = require('../app/models');
 
+/**
+ * Creates a new user with random data
+ * @returns {User} A new instance of User class
+ */
 function createUser(){
     const firstname = faker.person.firstName();
     const lastname = faker.person.lastName();
@@ -15,6 +19,10 @@ function createUser(){
     return user;
 }
 
+/**
+ * Create a new vehicle with random data
+ * @returns {Vehicle} A new instance of Vehicle class
+ */
 function createVehicle(){
     const vehicleType = ['essence', 'diesel', 'électrique'];
     const type = vehicleType[generateRandomInt(0,2)];
@@ -28,6 +36,12 @@ function createVehicle(){
     return vehicle;
 }
 
+/**
+ * Creates a new address with random data
+ * I need to pass a parameter variable that will be incremented when I import my data into the database so that each user has an associated address.
+ * @param {number} counter - The ID of the owner associated with the address 
+ * @returns {Address} A new instance of Address class
+ */
 function createAddress(counter){
     const city = faker.location.city();
     const country = 'France';
@@ -40,6 +54,10 @@ function createAddress(counter){
     return address;
 }
 
+/**
+ * Creates a new review with random data
+ * @returns {Review} A new instance of Review class
+ */
 function createReview(){
     const authorId = generateRandomInt(1, 1000);
     let targetId = generateRandomInt(1, 1000);

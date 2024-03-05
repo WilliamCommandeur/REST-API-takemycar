@@ -4,7 +4,11 @@ const { createUser, createVehicle, createAddress, createReview} = require('./cre
 
 
 
-
+/**
+ * Import users into the database
+ * @param {integer} quantity - number of rows to import 
+ * @returns {Promise<Array>} - A promise that resolves to an array of database queries
+ */
 function importUsers(quantity){
     const inserts = [];
     for (let userIndex = 0; userIndex < quantity; userIndex++){
@@ -18,7 +22,9 @@ function importUsers(quantity){
     return Promise.all(inserts);
 }
 
-
+/**
+ * Import vehicles into the database
+ */
 function importVehicles(quantity){
     const inserts = [];
     for (let vehicleIndex = 0; vehicleIndex < quantity; vehicleIndex++){
@@ -32,6 +38,9 @@ function importVehicles(quantity){
     return Promise.all(inserts)
 }
 
+/**
+ * Import addresses into the database
+ */
 function importAddresses(quantity){
     const inserts = [];
     for (let addressIndex = 0; addressIndex < quantity; addressIndex++){
@@ -45,6 +54,9 @@ function importAddresses(quantity){
     return Promise.all(inserts)
 }
 
+/**
+ * Import reviews into the database
+ */
 function importReviews(quantity){
     const inserts = [];
     for (let reviewIndex = 0; reviewIndex < quantity; reviewIndex++){
