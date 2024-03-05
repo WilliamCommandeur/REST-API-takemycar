@@ -6,7 +6,7 @@ const { createUser, createVehicle, createAddress, createReview} = require('./cre
 
 /**
  * Import users into the database
- * @param {integer} quantity - number of rows to import 
+ * @param {number} quantity - number of rows to import 
  * @returns {Promise<Array>} - A promise that resolves to an array of database queries
  */
 function importUsers(quantity){
@@ -70,7 +70,6 @@ function importReviews(quantity){
     return Promise.all(inserts);
 }
 
-// console.log(client);
 
 client.connect()
     .then(() => console.log("Import des données..."))
