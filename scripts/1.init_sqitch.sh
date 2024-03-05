@@ -1,4 +1,4 @@
-rm /migrations.sqitch.plan
+rm migrations/sqitch.plan
 
 sqitch init takemycar --engine pg --top-dir migrations
 
