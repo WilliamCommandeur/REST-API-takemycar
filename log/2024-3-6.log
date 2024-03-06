@@ -1,0 +1,12 @@
+Heure;Url;Message;StackTrace;
+10:00:00 GMT+0100 (heure normale d’Europe centrale);/user;URL non trouvée;Error: URL non trouvée
+    at _404 (/var/www/html/REST-API-takemycar/app/service/error/index.js:42:14)
+    at Layer.handle [as handle_request] (/var/www/html/REST-API-takemycar/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/var/www/html/REST-API-takemycar/node_modules/express/lib/router/index.js:328:13)
+    at /var/www/html/REST-API-takemycar/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/var/www/html/REST-API-takemycar/node_modules/express/lib/router/index.js:346:12)
+    at next (/var/www/html/REST-API-takemycar/node_modules/express/lib/router/index.js:280:10)
+    at /var/www/html/REST-API-takemycar/node_modules/express/lib/router/index.js:646:15
+    at next (/var/www/html/REST-API-takemycar/node_modules/express/lib/router/index.js:265:14)
+    at Function.handle (/var/www/html/REST-API-takemycar/node_modules/express/lib/router/index.js:175:3)
+    at router (/var/www/html/REST-API-takemycar/node_modules/express/lib/router/index.js:47:12)

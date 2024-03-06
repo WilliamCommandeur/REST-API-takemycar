@@ -1,4 +1,5 @@
 const client = require('../database/client');
+const APIError = require('../service/error/APIError');
 
 module.exports = {
 
@@ -24,7 +25,7 @@ module.exports = {
             const response = await client.query(sqlQuery, values);
             result = response.rows[0];
         } catch(err) {
-            error = err;
+            error = new APIError(err, 500);
         }
         return {result, error};
     },
