@@ -10,3 +10,8 @@ Heure;Url;Message;StackTrace;
     at next (/var/www/html/REST-API-takemycar/node_modules/express/lib/router/index.js:265:14)
     at Function.handle (/var/www/html/REST-API-takemycar/node_modules/express/lib/router/index.js:175:3)
     at router (/var/www/html/REST-API-takemycar/node_modules/express/lib/router/index.js:47:12)
+10:03:01 GMT+0100 (heure normale d’Europe centrale);/users;une valeur NULL viole la contrainte NOT NULL de la colonne « password » dans la relation « user »;error: une valeur NULL viole la contrainte NOT NULL de la colonne « password » dans la relation « user »
+    at /var/www/html/REST-API-takemycar/node_modules/pg/lib/client.js:526:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.insertUser (/var/www/html/REST-API-takemycar/app/datamapper/user.js:53:30)
+    at async addUser (/var/www/html/REST-API-takemycar/app/controller/user.js:24:33)
