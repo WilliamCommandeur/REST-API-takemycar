@@ -4,8 +4,8 @@ const addressController = require('./address');
 const reviewController = require('./review');
 
 module.exports = {
-    userController,
-    vehicleController,
-    addressController,
-    reviewController,
-}
+  userController,
+  vehicleController,
+  addressController,
+  reviewController,
+};
