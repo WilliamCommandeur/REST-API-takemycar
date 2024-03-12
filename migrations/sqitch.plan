@@ -1,5 +1,0 @@
-%syntax-version=1.0.0
-%project=takemycar
-
-1.init 2024-03-05T16:03:58Z Etudiant O'clock <student@teleporter> # création des tables
-2.crud_functions 2024-03-05T16:03:58Z Etudiant O'clock <student@teleporter> # ajout des fonctions CRUD

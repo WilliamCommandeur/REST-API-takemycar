@@ -4,8 +4,8 @@ const Address = require('./address');
 const Review = require('./review');
 
 module.exports = {
-    User,
-    Vehicle,
-    Address,
-    Review
+  User,
+  Vehicle,
+  Address,
+  Review,
 };

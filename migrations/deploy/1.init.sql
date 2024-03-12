@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS "vehicle"
     vehicle_plate TEXT NOT NULL,
     modele TEXT NOT NULL,
     price pnum NOT NULL,
-    owner_id INT NOT NULL REFERENCES "user"(id)
+    owner_id INT NOT NULL REFERENCES "user"(id) ON DELETE CASCADE
 );
 
 -- Création de la table address
@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS "address"
     street TEXT NOT NULL,
     zipcode TEXT NOT NULL,
     additionnal TEXT,
-    owner_id INT NOT NULL REFERENCES "user"(id)
+    owner_id INT NOT NULL REFERENCES "user"(id) ON DELETE CASCADE
 );
 
 -- Création du domaine pour les notes (0 à 5)
@@ -61,8 +61,8 @@ CREATE DOMAIN rating_domain AS numeric CHECK (VALUE >= 0.0 AND VALUE <= 5.0);
 CREATE TABLE IF NOT EXISTS "review"
 (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    author_id INT NOT NULL REFERENCES "user"(id),
-    target_id INT NOT NULL REFERENCES "user"(id),
+    author_id INT NOT NULL REFERENCES "user"(id) ON DELETE CASCADE,
+    target_id INT NOT NULL REFERENCES "user"(id) ON DELETE CASCADE,
     rating rating_domain NOT NULL,
     comment TEXT
 );

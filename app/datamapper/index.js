@@ -4,8 +4,8 @@ const addressDatamapper = require('./address');
 const reviewDatamapper = require('./review');
 
 module.exports = {
-    userDatamapper,
-    vehicleDatamapper,
-    addressDatamapper,
-    reviewDatamapper,
-}
+  userDatamapper,
+  vehicleDatamapper,
+  addressDatamapper,
+  reviewDatamapper,
+};
