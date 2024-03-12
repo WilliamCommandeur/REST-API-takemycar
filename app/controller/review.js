@@ -12,4 +12,10 @@ module.exports = {
         const {result, error} = await reviewDatamapper.findReviewById(reviewId);
         controllerUtil.manageResponse(error, result, res, next);
     },
+
+    async addReview(req, res, next){
+        const review = req.body;
+        const {result, error} = await reviewDatamapper.insertReview(review);
+        controllerUtil.manageResponse(error, result, res, next);
+    }
 }

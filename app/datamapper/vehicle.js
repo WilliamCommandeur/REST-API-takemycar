@@ -28,4 +28,18 @@ module.exports = {
         }
         return {result, error};
     },
+
+    async insertVehicle(body){
+        let result;
+        let error;
+        try {
+            const sqlQuery = `SELECT * FROM insert_vehicle($1);`;
+            const values = [body];
+            const response = await client.query(sqlQuery, values);
+            result = response.rows;
+        } catch(err) {
+            error = new APIError(err, 500);
+        }
+        return {result, error};
+    },
 }

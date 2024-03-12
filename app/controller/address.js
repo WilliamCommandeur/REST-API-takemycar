@@ -12,4 +12,10 @@ module.exports = {
         const {result, error} = await addressDatamapper.findAddressById(addressId);
         controllerUtil.manageResponse(error, result, res, next);
     },
+
+    async addAddress(req, res, next){
+        const address = req.body;
+        const {result, error} = await addressDatamapper.insertAddress(address);
+        controllerUtil.manageResponse(error, result, res, next);
+    }
 }

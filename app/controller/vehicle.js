@@ -11,5 +11,11 @@ module.exports = {
         const vehicleId = req.params.id;
         const {result, error} = await vehicleDatamapper.findVehicleById(vehicleId);
         controllerUtil.manageResponse(error, result, res, next);
+    }, 
+
+    async addVehicle(req, res, next){
+        const vehicle = req.body;
+        const {result, error} = await vehicleDatamapper.insertVehicle(vehicle);
+        controllerUtil.manageResponse(error, result, res, next);
     }
 }

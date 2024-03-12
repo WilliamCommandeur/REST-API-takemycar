@@ -53,7 +53,7 @@ module.exports = {
             const response = await client.query(sqlQuery, values);
             result = response.rows;
         } catch(err) {
-            error = err;
+            error = new APIError(err, 500);
         }
         return {result, error};
     },

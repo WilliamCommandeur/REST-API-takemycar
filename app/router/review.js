@@ -6,7 +6,7 @@ const router = Router();
 router.get('/reviews', reviewController.getReviews);
 router.get('/reviews/:id', reviewController.getReviewById);
 
-// router.post('/reviews', reviewController.addReview);
+router.post('/reviews', reviewController.addReview);
 // router.patch('/reviews/:id', reviewController.modifyReview);
 // router.delete('/reviews/:id', reviewController.deleteReview);
 
