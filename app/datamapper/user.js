@@ -4,6 +4,10 @@ const datamapperUtil = require('../util/datamapper');
 
 module.exports = {
 
+  /**
+   * Requête pour récupérer tous les utilisateurs
+   * @returns tableau d'objets utilisateur
+   */
   async findUsers() {
     let result;
     let error;
@@ -17,6 +21,11 @@ module.exports = {
     return { result, error };
   },
 
+  /**
+   * Requête pour récuper une utilisateur en fonction de son ID
+   * @param {number} id 
+   * @returns un objet utilisateur
+   */
   async findUserById(id) {
     let result;
     let error;
@@ -31,6 +40,11 @@ module.exports = {
     return { result, error };
   },
 
+  /**
+   * Supprime un utilisateur en BDD en fonction de son ID
+   * @param {number} id 
+   * @returns booléen
+   */
   async destroyUser(id) {
     let result;
     let error;
@@ -45,6 +59,11 @@ module.exports = {
     return { result, error };
   },
 
+  /**
+   * Ajout d'un utilisateur en BDD
+   * @param {object} body contenant les infos de l'utilisateur 
+   * @returns un objet utilisateur
+   */
   async insertUser(body) {
     let result;
     let error;
@@ -59,6 +78,12 @@ module.exports = {
     return { result, error };
   },
 
+  /**
+   * Modification d'un utilisateur en BDD
+   * @param {object} body 
+   * @param {number} id 
+   * @returns un objet utilisateur
+   */
   async updateUser(body, id) {
     let result;
     let error;

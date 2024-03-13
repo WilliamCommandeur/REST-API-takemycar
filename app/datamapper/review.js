@@ -3,6 +3,11 @@ const APIError = require('../service/error/APIError');
 const datamapperUtil = require('../util/datamapper');
 
 module.exports = {
+
+  /**
+   * Requête pour récupérer tous les commentaires
+   * @returns tableau d'objets commentaires
+   */
   async findReviews() {
     let result;
     let error;
@@ -16,6 +21,11 @@ module.exports = {
     return { result, error };
   },
 
+  /**
+   * Requête pour récuperer un commentaire en fonction de son ID
+   * @param {number} id 
+   * @returns un objet commentaire
+   */
   async findReviewById(id) {
     let result;
     let error;
@@ -29,7 +39,12 @@ module.exports = {
     }
     return { result, error };
   },
-
+  
+  /**
+   * Ajout d'un commentaire en BDD
+   * @param {object} body contenant les infos du commentaire 
+   * @returns un objet commentaire
+   */
   async insertReview(body) {
     let result;
     let error;
@@ -44,6 +59,11 @@ module.exports = {
     return { result, error };
   },
 
+  /**
+   * Suppression d'un commentaire en BDD
+   * @param {number} id 
+   * @returns booléen
+   */
   async destroyReview(id) {
     let result;
     let error;
@@ -58,6 +78,12 @@ module.exports = {
     return { result, error };
   },
 
+  /**
+   * Mopdification d'un commentaire en BDD
+   * @param {object} body 
+   * @param {number} id 
+   * @returns un objet commentaire
+   */
   async updateReview(body, id) {
     let result;
     let error;

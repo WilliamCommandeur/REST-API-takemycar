@@ -3,6 +3,11 @@ const APIError = require('../service/error/APIError');
 const datamapperUtil = require('../util/datamapper');
 
 module.exports = {
+
+  /**
+   * Requête pour récupérer toutes les addresses
+   * @returns tableau d'objets addresse
+   */
   async findAddresses() {
     let result;
     let error;
@@ -16,6 +21,11 @@ module.exports = {
     return { result, error };
   },
 
+  /**
+   * Requête pour récupérer une addresse en fonction de son ID
+   * @param {number} id 
+   * @returns un objet addresse
+   */
   async findAddressById(id) {
     let result;
     let error;
@@ -30,6 +40,11 @@ module.exports = {
     return { result, error };
   },
 
+  /**
+   * Ajout d'une addresse en BDD
+   * @param {object} body contenant les infos de l'addresse
+   * @returns un objet addresse
+   */
   async insertAddress(body) {
     let result;
     let error;
@@ -44,6 +59,11 @@ module.exports = {
     return { result, error };
   },
 
+  /**
+   * Supprime une addresse en BDD
+   * @param {number} id 
+   * @returns booléen
+   */
   async destroyAddress(id) {
     let result;
     let error;
@@ -58,6 +78,12 @@ module.exports = {
     return { result, error };
   },
 
+  /**
+   * Modification d'une addresse en BDD
+   * @param {object} body 
+   * @param {number} id 
+   * @returns un objet addresse
+   */
   async updateAddress(body, id) {
     let result;
     let error;
