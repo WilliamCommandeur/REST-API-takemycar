@@ -9,7 +9,7 @@ module.exports = {
       if (result) {
         res.json(result);
       } else {
-        res.json("Cette ressoure n'existe pas");
+        res.json("Cette ressource n'existe pas");
       }
     }
   },

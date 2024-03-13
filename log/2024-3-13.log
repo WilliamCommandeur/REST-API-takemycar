@@ -1,0 +1,73 @@
+Heure;Url;Message;StackTrace;
+17:27:57 GMT+0100 (heure normale d’Europe centrale);/users/3;il n'y a pas de paramètre $2;error: il n'y a pas de paramètre $2
+    at /var/www/html/REST-API-takemycar/node_modules/pg/lib/client.js:526:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.updateUser (/var/www/html/REST-API-takemycar/app/datamapper/user.js:68:24)
+    at async modifyUser (/var/www/html/REST-API-takemycar/app/controller/user.js:57:31)
+17:28:44 GMT+0100 (heure normale d’Europe centrale);/users/3;il n'y a pas de paramètre $2;error: il n'y a pas de paramètre $2
+    at /var/www/html/REST-API-takemycar/node_modules/pg/lib/client.js:526:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.updateUser (/var/www/html/REST-API-takemycar/app/datamapper/user.js:68:24)
+    at async modifyUser (/var/www/html/REST-API-takemycar/app/controller/user.js:57:31)
+17:28:51 GMT+0100 (heure normale d’Europe centrale);/users/3;il n'y a pas de paramètre $2;error: il n'y a pas de paramètre $2
+    at /var/www/html/REST-API-takemycar/node_modules/pg/lib/client.js:526:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.updateUser (/var/www/html/REST-API-takemycar/app/datamapper/user.js:69:24)
+    at async modifyUser (/var/www/html/REST-API-takemycar/app/controller/user.js:57:31)
+17:31:05 GMT+0100 (heure normale d’Europe centrale);/users/3;A query must have either text or a name. Supplying neither is unsupported.;Error: A query must have either text or a name. Supplying neither is unsupported.
+    at /var/www/html/REST-API-takemycar/node_modules/pg/lib/client.js:526:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.updateUser (/var/www/html/REST-API-takemycar/app/datamapper/user.js:69:24)
+    at async modifyUser (/var/www/html/REST-API-takemycar/app/controller/user.js:57:31)
+17:32:22 GMT+0100 (heure normale d’Europe centrale);/users/3;A query must have either text or a name. Supplying neither is unsupported.;Error: A query must have either text or a name. Supplying neither is unsupported.
+    at /var/www/html/REST-API-takemycar/node_modules/pg/lib/client.js:526:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.updateUser (/var/www/html/REST-API-takemycar/app/datamapper/user.js:69:24)
+    at async modifyUser (/var/www/html/REST-API-takemycar/app/controller/user.js:57:31)
+17:35:28 GMT+0100 (heure normale d’Europe centrale);/addresses/3;erreur de syntaxe sur ou près de « 0 »;error: erreur de syntaxe sur ou près de « 0 »
+    at /var/www/html/REST-API-takemycar/node_modules/pg/lib/client.js:526:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.updateAddress (/var/www/html/REST-API-takemycar/app/datamapper/address.js:67:24)
+    at async modifyAddress (/var/www/html/REST-API-takemycar/app/controller/address.js:30:31)
+17:35:59 GMT+0100 (heure normale d’Europe centrale);/addresses/3;erreur de syntaxe sur ou près de « 0 »;error: erreur de syntaxe sur ou près de « 0 »
+    at /var/www/html/REST-API-takemycar/node_modules/pg/lib/client.js:526:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.updateAddress (/var/www/html/REST-API-takemycar/app/datamapper/address.js:67:24)
+    at async modifyAddress (/var/www/html/REST-API-takemycar/app/controller/address.js:30:31)
+17:36:10 GMT+0100 (heure normale d’Europe centrale);/addresses/3;erreur de syntaxe sur ou près de « 0 »;error: erreur de syntaxe sur ou près de « 0 »
+    at /var/www/html/REST-API-takemycar/node_modules/pg/lib/client.js:526:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.updateAddress (/var/www/html/REST-API-takemycar/app/datamapper/address.js:68:24)
+    at async modifyAddress (/var/www/html/REST-API-takemycar/app/controller/address.js:30:31)
+17:37:23 GMT+0100 (heure normale d’Europe centrale);/addresses/3;erreur de syntaxe sur ou près de « 0 »;error: erreur de syntaxe sur ou près de « 0 »
+    at /var/www/html/REST-API-takemycar/node_modules/pg/lib/client.js:526:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.updateAddress (/var/www/html/REST-API-takemycar/app/datamapper/address.js:68:24)
+    at async modifyAddress (/var/www/html/REST-API-takemycar/app/controller/address.js:31:31)
+17:58:46 GMT+0100 (heure normale d’Europe centrale);/vehicles/reviews;error: syntaxe en entrée invalide pour le type integer : « reviews »;Error: error: syntaxe en entrée invalide pour le type integer : « reviews »
+    at Object.findVehicleById (/var/www/html/REST-API-takemycar/app/datamapper/vehicle.js:28:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getVehicleById (/var/www/html/REST-API-takemycar/app/controller/vehicle.js:12:31)
+17:58:50 GMT+0100 (heure normale d’Europe centrale);/vehicles/review;error: syntaxe en entrée invalide pour le type integer : « review »;Error: error: syntaxe en entrée invalide pour le type integer : « review »
+    at Object.findVehicleById (/var/www/html/REST-API-takemycar/app/datamapper/vehicle.js:28:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getVehicleById (/var/www/html/REST-API-takemycar/app/controller/vehicle.js:12:31)
+17:59:08 GMT+0100 (heure normale d’Europe centrale);/reviews/1;erreur de syntaxe sur ou près de « DELE »;error: erreur de syntaxe sur ou près de « DELE »
+    at /var/www/html/REST-API-takemycar/node_modules/pg/lib/client.js:526:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.destroyReview (/var/www/html/REST-API-takemycar/app/datamapper/review.js:53:24)
+    at async deleteReview (/var/www/html/REST-API-takemycar/app/controller/review.js:24:31)
+18:00:38 GMT+0100 (heure normale d’Europe centrale);/reviews/1;erreur de syntaxe sur ou près de « DELE »;error: erreur de syntaxe sur ou près de « DELE »
+    at /var/www/html/REST-API-takemycar/node_modules/pg/lib/client.js:526:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.destroyReview (/var/www/html/REST-API-takemycar/app/datamapper/review.js:53:24)
+    at async deleteReview (/var/www/html/REST-API-takemycar/app/controller/review.js:24:31)
+18:00:54 GMT+0100 (heure normale d’Europe centrale);/reviews/1;erreur de syntaxe sur ou près de « DELE »;error: erreur de syntaxe sur ou près de « DELE »
+    at /var/www/html/REST-API-takemycar/node_modules/pg/lib/client.js:526:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.destroyReview (/var/www/html/REST-API-takemycar/app/datamapper/review.js:53:24)
+    at async deleteReview (/var/www/html/REST-API-takemycar/app/controller/review.js:24:31)
+18:02:12 GMT+0100 (heure normale d’Europe centrale);/reviews/4501;respons is not defined;ReferenceError: respons is not defined
+    at Object.updateReview (/var/www/html/REST-API-takemycar/app/datamapper/review.js:68:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async modifyReview (/var/www/html/REST-API-takemycar/app/controller/review.js:31:31)

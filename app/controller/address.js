@@ -2,7 +2,7 @@ const controllerUtil = require('../util/controller');
 const { addressDatamapper } = require('../datamapper');
 
 module.exports = {
-  async getAddresses(req, res, next) {
+  async getAddresses(_, res, next) {
     const { result, error } = await addressDatamapper.findAddresses();
     controllerUtil.manageResponse(error, result, res, next);
   },
@@ -13,9 +13,23 @@ module.exports = {
     controllerUtil.manageResponse(error, result, res, next);
   },
 
-    async addAddress(req, res, next){
-        const address = req.body;
-        const {result, error} = await addressDatamapper.insertAddress(address);
-        controllerUtil.manageResponse(error, result, res, next);
-    }
+  async addAddress(req, res, next) {
+    const address = req.body;
+    const {result, error} = await addressDatamapper.insertAddress(address);
+    controllerUtil.manageResponse(error, result, res, next);
+  },
+
+  async deleteAddress(req, res, next) {
+    const addressId = req.params.id;
+    const { result, error } = await addressDatamapper.destroyAddress(addressId);
+    controllerUtil.manageResponse(error, result, res, next);
+  },
+
+  async modifyAddress(req, res, next) {
+    const addressId = req.params.id;
+    const address = req.body;
+    const { result, error } = await addressDatamapper.updateAddress(addressId, address);
+    controllerUtil.manageResponse(error, result, res, next);
+  },
+
 };

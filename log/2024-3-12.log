@@ -1,0 +1,42 @@
+Heure;Url;Message;StackTrace;
+17:11:31 GMT+0100 (heure normale d’Europe centrale);/users/1;erreur de syntaxe sur ou près de « * »;error: erreur de syntaxe sur ou près de « * »
+    at /var/www/html/REST-API-takemycar/node_modules/pg/lib/client.js:526:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.destroyUser (/var/www/html/REST-API-takemycar/app/datamapper/user.js:39:24)
+    at async deleteUser (/var/www/html/REST-API-takemycar/app/controller/user.js:32:31)
+17:14:03 GMT+0100 (heure normale d’Europe centrale);/users/1;erreur de syntaxe sur ou près de « * »;error: erreur de syntaxe sur ou près de « * »
+    at /var/www/html/REST-API-takemycar/node_modules/pg/lib/client.js:526:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.destroyUser (/var/www/html/REST-API-takemycar/app/datamapper/user.js:39:24)
+    at async deleteUser (/var/www/html/REST-API-takemycar/app/controller/user.js:32:31)
+17:14:25 GMT+0100 (heure normale d’Europe centrale);/users/1;erreur de syntaxe sur ou près de « * »;error: erreur de syntaxe sur ou près de « * »
+    at /var/www/html/REST-API-takemycar/node_modules/pg/lib/client.js:526:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.destroyUser (/var/www/html/REST-API-takemycar/app/datamapper/user.js:39:24)
+    at async deleteUser (/var/www/html/REST-API-takemycar/app/controller/user.js:32:31)
+17:15:06 GMT+0100 (heure normale d’Europe centrale);/users/1;erreur de syntaxe sur ou près de « * »;error: erreur de syntaxe sur ou près de « * »
+    at /var/www/html/REST-API-takemycar/node_modules/pg/lib/client.js:526:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.destroyUser (/var/www/html/REST-API-takemycar/app/datamapper/user.js:39:24)
+    at async deleteUser (/var/www/html/REST-API-takemycar/app/controller/user.js:32:31)
+17:15:11 GMT+0100 (heure normale d’Europe centrale);/users/1;erreur de syntaxe sur ou près de « * »;error: erreur de syntaxe sur ou près de « * »
+    at /var/www/html/REST-API-takemycar/node_modules/pg/lib/client.js:526:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.destroyUser (/var/www/html/REST-API-takemycar/app/datamapper/user.js:39:24)
+    at async deleteUser (/var/www/html/REST-API-takemycar/app/controller/user.js:32:31)
+17:16:57 GMT+0100 (heure normale d’Europe centrale);/users/1;UPDATE ou DELETE sur la table « user » viole la contrainte de clé étrangère « vehicle_owner_id_fkey » de la table « vehicle »;error: UPDATE ou DELETE sur la table « user » viole la contrainte de clé étrangère « vehicle_owner_id_fkey » de la table « vehicle »
+    at /var/www/html/REST-API-takemycar/node_modules/pg/lib/client.js:526:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.destroyUser (/var/www/html/REST-API-takemycar/app/datamapper/user.js:39:24)
+    at async deleteUser (/var/www/html/REST-API-takemycar/app/controller/user.js:32:31)
+17:26:14 GMT+0100 (heure normale d’Europe centrale);/users/2;URL non trouvée;Error: URL non trouvée
+    at _404 (/var/www/html/REST-API-takemycar/app/service/error/index.js:40:10)
+    at Layer.handle [as handle_request] (/var/www/html/REST-API-takemycar/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/var/www/html/REST-API-takemycar/node_modules/express/lib/router/index.js:328:13)
+    at /var/www/html/REST-API-takemycar/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/var/www/html/REST-API-takemycar/node_modules/express/lib/router/index.js:346:12)
+    at next (/var/www/html/REST-API-takemycar/node_modules/express/lib/router/index.js:280:10)
+    at /var/www/html/REST-API-takemycar/node_modules/express/lib/router/index.js:646:15
+    at next (/var/www/html/REST-API-takemycar/node_modules/express/lib/router/index.js:265:14)
+    at Function.handle (/var/www/html/REST-API-takemycar/node_modules/express/lib/router/index.js:175:3)
+    at router (/var/www/html/REST-API-takemycar/node_modules/express/lib/router/index.js:47:12)

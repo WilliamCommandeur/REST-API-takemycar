@@ -71,8 +71,8 @@ function importReviews(quantity){
 }
 
 
-client.connect()
-    .then(() => console.log("Import des données..."))
+console.log("Import des données...");
+Promise.resolve()
     .then(() => importUsers(1000))
     .then(() => importVehicles(1250))
     .then(() => importAddresses(1000))

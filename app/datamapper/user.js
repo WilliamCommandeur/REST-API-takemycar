@@ -1,5 +1,6 @@
 const client = require('../database/client');
 const APIError = require('../service/error/APIError');
+const datamapperUtil = require('../util/datamapper');
 
 module.exports = {
 
@@ -34,10 +35,10 @@ module.exports = {
     let result;
     let error;
     try {
-      const sqlQuery = 'DELETE * FROM "user" WHERE id=$1 RETURNING *;';
+      const sqlQuery = 'DELETE FROM "user" WHERE id=$1;';
       const values = [id];
       const response = await client.query(sqlQuery, values);
-      result = response.rows[0];
+      result = !!response.rowCount;
     } catch (err) {
       error = err;
     }
@@ -51,27 +52,20 @@ module.exports = {
       const sqlQuery = 'SELECT * FROM insert_user($1);';
       const values = [body];
       const response = await client.query(sqlQuery, values);
-      result = response.rows;
+      result = response.rows[0];
     } catch (err) {
       error = err;
     }
     return { result, error };
   },
 
-  async updateUser(id, body) {
+  async updateUser(body, id) {
     let result;
     let error;
-    const fieldsAndPlaceholders = [];
-    const values = [];
-    Object.entries(body).forEach(([prop, value], index) => {
-      fieldsAndPlaceholders.push(`${prop} = $${index + 1}`);
-      const insertValue = Array.isArray(value) ? `${value}` : value;
-      values.push(insertValue);
-    });
-    values.push(id);
     try {
-      const sqlQuery = `UPDATE "user" SET ${fieldsAndPlaceholders} WHERE id = $${values.length} RETURNING *`;
-      const response = await client.query(sqlQuery, values);
+      const tableName = 'user';
+      const sqlQuery = datamapperUtil.generateUpdateQuery(id, body, tableName);
+      const response = await client.query(sqlQuery);
       result = response.rows[0];
     } catch (err) {
       error = err;
