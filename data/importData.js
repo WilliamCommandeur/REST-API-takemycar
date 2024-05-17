@@ -70,6 +70,7 @@ function importReviews(quantity) {
   return Promise.all(inserts);
 }
 
+<<<<<<< HEAD
 Promise.resolve()
   .then(() => console.log('Import des données...'))
   .then(() => importUsers(1000))
@@ -78,3 +79,14 @@ Promise.resolve()
   .then(() => importReviews(4500))
   .then(() => console.log('Import des données terminé'))
   .finally(() => client.end());
+=======
+
+console.log("Import des données...");
+Promise.resolve()
+    .then(() => importUsers(1000))
+    .then(() => importVehicles(1250))
+    .then(() => importAddresses(1000))
+    .then(() => importReviews(4500))
+    .then(() => console.log("Import des données terminé"))
+    .finally(() => client.end());
+>>>>>>> 9ea425a1d25ebde8ebd5884c07e44891a4cb4d04

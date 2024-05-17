@@ -1,3 +1,4 @@
-/node_modules
 .env
-/log
+sqitch.conf
+node_modules
+log 
